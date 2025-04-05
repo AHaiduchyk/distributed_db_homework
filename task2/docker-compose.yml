@@ -1,0 +1,31 @@
+version: '3'
+services:
+  hazelcast1:
+    image: hazelcast/hazelcast:5.1
+    container_name: hazelcast1
+    ports:
+      - "5701:5701"
+    environment:
+      - HZ_CLUSTERNAME=dev
+      - HZ_CP_MEMBER_COUNT=3
+      - HZ_NETWORK_PUBLICADDRESS=hazelcast1:5701
+
+  hazelcast2:
+    image: hazelcast/hazelcast:5.1
+    container_name: hazelcast2
+    ports:
+      - "5702:5701"
+    environment:
+      - HZ_CLUSTERNAME=dev
+      - HZ_CP_MEMBER_COUNT=3
+      - HZ_NETWORK_PUBLICADDRESS=hazelcast2:5701
+
+  hazelcast3:
+    image: hazelcast/hazelcast:5.1
+    container_name: hazelcast3
+    ports:
+      - "5703:5701"
+    environment:
+      - HZ_CLUSTERNAME=dev
+      - HZ_CP_MEMBER_COUNT=3
+      - HZ_NETWORK_PUBLICADDRESS=hazelcast3:5701
