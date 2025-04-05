@@ -2,9 +2,9 @@ venv/*
 
 logs/*
 __pycache__.*
-task1_pg_counter.log
-task1.py
-test_counter1.py
+
+
+
 __pycache__/task1.cpython-311.pyc
 __pycache__/test_counter.cpython-311.pyc
 __pycache__/test_counter1.cpython-311.pyc
