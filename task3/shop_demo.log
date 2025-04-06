@@ -1,0 +1,58 @@
+2025-04-06 15:20:35,802 - 1. Створення товарів
+2025-04-06 15:20:35,850 - 3. Оновлення товарів: додаємо 'discount' і 'available'
+2025-04-06 15:20:35,852 - Оновлення цін для товарів з battery_life
+2025-04-06 15:20:35,853 - 4. Створення замовлень
+2025-04-06 15:20:35,862 - 2.1. Всі товари:
+2025-04-06 15:20:35,863 - {'_id': ObjectId('67f2719358d6529103efaf59'), 'category': 'Phone', 'model': 'iPhone 13', 'producer': 'Apple', 'price': 999, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,863 - {'_id': ObjectId('67f2719358d6529103efaf5a'), 'category': 'TV', 'model': 'Samsung QLED', 'producer': 'Samsung', 'price': 1500, 'size': 55}
+2025-04-06 15:20:35,863 - {'_id': ObjectId('67f2719358d6529103efaf5b'), 'category': 'Smart Watch', 'model': 'Galaxy Watch 5', 'producer': 'Samsung', 'price': 350, 'battery_life': '24h'}
+2025-04-06 15:20:35,863 - {'_id': ObjectId('67f2719358d6529103efaf5c'), 'category': 'Phone', 'model': 'Pixel 6', 'producer': 'Google', 'price': 699, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,863 - 2.2. Кількість товарів категорії 'Phone':
+2025-04-06 15:20:35,867 - 2
+2025-04-06 15:20:35,867 - 2.3. Унікальні категорії:
+2025-04-06 15:20:35,868 - ['Phone', 'Smart Watch', 'TV']
+2025-04-06 15:20:35,868 - 2.4. Унікальні виробники:
+2025-04-06 15:20:35,868 - ['Apple', 'Google', 'Samsung']
+2025-04-06 15:20:35,868 - 2.5. Категорія Phone та ціна 600-1000:
+2025-04-06 15:20:35,869 - {'_id': ObjectId('67f2719358d6529103efaf59'), 'category': 'Phone', 'model': 'iPhone 13', 'producer': 'Apple', 'price': 999, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,869 - {'_id': ObjectId('67f2719358d6529103efaf5c'), 'category': 'Phone', 'model': 'Pixel 6', 'producer': 'Google', 'price': 699, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,869 - 2.6. Модель iPhone 13 або Pixel 6:
+2025-04-06 15:20:35,870 - {'_id': ObjectId('67f2719358d6529103efaf59'), 'category': 'Phone', 'model': 'iPhone 13', 'producer': 'Apple', 'price': 999, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,870 - {'_id': ObjectId('67f2719358d6529103efaf5c'), 'category': 'Phone', 'model': 'Pixel 6', 'producer': 'Google', 'price': 699, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,870 - 2.7. Виробники зі списку [Google, Samsung]:
+2025-04-06 15:20:35,870 - {'_id': ObjectId('67f2719358d6529103efaf5a'), 'category': 'TV', 'model': 'Samsung QLED', 'producer': 'Samsung', 'price': 1500, 'size': 55}
+2025-04-06 15:20:35,870 - {'_id': ObjectId('67f2719358d6529103efaf5b'), 'category': 'Smart Watch', 'model': 'Galaxy Watch 5', 'producer': 'Samsung', 'price': 350, 'battery_life': '24h'}
+2025-04-06 15:20:35,870 - {'_id': ObjectId('67f2719358d6529103efaf5c'), 'category': 'Phone', 'model': 'Pixel 6', 'producer': 'Google', 'price': 699, 'available': True, 'discount': 10}
+2025-04-06 15:20:35,870 - 2.8. Товари з полем battery_life:
+2025-04-06 15:20:35,871 - {'_id': ObjectId('67f2719358d6529103efaf5b'), 'category': 'Smart Watch', 'model': 'Galaxy Watch 5', 'producer': 'Samsung', 'price': 350, 'battery_life': '24h'}
+2025-04-06 15:20:35,871 - 5.1. Всі замовлення:
+2025-04-06 15:20:35,871 - {'_id': ObjectId('67f2719358d6529103efaf5d'), 'order_number': 1001, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 2299, 'customer': {'name': 'Andrii', 'surname': 'Rodionov', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}, 'payment': {'card_owner': 'Andrii Rodionov', 'cardId': 12345678}, 'items_id': [ObjectId('67f2719358d6529103efaf59'), ObjectId('67f2719358d6529103efaf5a')]}
+2025-04-06 15:20:35,871 - {'_id': ObjectId('67f2719358d6529103efaf5e'), 'order_number': 1002, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 999, 'customer': {'name': 'Oksana', 'surname': 'Ivanova', 'phones': [9870000], 'address': 'Khreshchatyk 1, Kyiv, UA'}, 'payment': {'card_owner': 'Oksana Ivanova', 'cardId': 87654321}, 'items_id': [ObjectId('67f2719358d6529103efaf5a'), ObjectId('67f2719358d6529103efaf5b')]}
+2025-04-06 15:20:35,871 - 5.2. Замовлення з сумою > 1000:
+2025-04-06 15:20:35,872 - {'_id': ObjectId('67f2719358d6529103efaf5d'), 'order_number': 1001, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 2299, 'customer': {'name': 'Andrii', 'surname': 'Rodionov', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}, 'payment': {'card_owner': 'Andrii Rodionov', 'cardId': 12345678}, 'items_id': [ObjectId('67f2719358d6529103efaf59'), ObjectId('67f2719358d6529103efaf5a')]}
+2025-04-06 15:20:35,872 - 5.3. Замовлення клієнта Andrii:
+2025-04-06 15:20:35,872 - {'_id': ObjectId('67f2719358d6529103efaf5d'), 'order_number': 1001, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 2299, 'customer': {'name': 'Andrii', 'surname': 'Rodionov', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}, 'payment': {'card_owner': 'Andrii Rodionov', 'cardId': 12345678}, 'items_id': [ObjectId('67f2719358d6529103efaf59'), ObjectId('67f2719358d6529103efaf5a')]}
+2025-04-06 15:20:35,872 - 5.4. Замовлення з товаром Samsung QLED:
+2025-04-06 15:20:35,873 - {'_id': ObjectId('67f2719358d6529103efaf5d'), 'order_number': 1001, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 2299, 'customer': {'name': 'Andrii', 'surname': 'Rodionov', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}, 'payment': {'card_owner': 'Andrii Rodionov', 'cardId': 12345678}, 'items_id': [ObjectId('67f2719358d6529103efaf59'), ObjectId('67f2719358d6529103efaf5a')]}
+2025-04-06 15:20:35,873 - {'_id': ObjectId('67f2719358d6529103efaf5e'), 'order_number': 1002, 'date': datetime.datetime(2025, 4, 6, 12, 20, 35, 856000), 'total_sum': 999, 'customer': {'name': 'Oksana', 'surname': 'Ivanova', 'phones': [9870000], 'address': 'Khreshchatyk 1, Kyiv, UA'}, 'payment': {'card_owner': 'Oksana Ivanova', 'cardId': 87654321}, 'items_id': [ObjectId('67f2719358d6529103efaf5a'), ObjectId('67f2719358d6529103efaf5b')]}
+2025-04-06 15:20:35,873 - 5.5. Додаємо товар Pixel 6 до всіх замовлень з Samsung QLED та збільшуємо вартість на 100
+2025-04-06 15:20:35,874 - 5.6. Кількість товарів у кожному замовленні:
+2025-04-06 15:20:35,874 - Order 1001 has 3 items
+2025-04-06 15:20:35,874 - Order 1002 has 3 items
+2025-04-06 15:20:35,874 - 5.7. Інфо про кастомера + номер картки (total > 1000):
+2025-04-06 15:20:35,875 - {'customer': {'name': 'Andrii', 'surname': 'Rodionov', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}, 'payment': {'cardId': 12345678}}
+2025-04-06 15:20:35,875 - {'customer': {'name': 'Oksana', 'surname': 'Ivanova', 'phones': [9870000], 'address': 'Khreshchatyk 1, Kyiv, UA'}, 'payment': {'cardId': 87654321}}
+2025-04-06 15:20:35,875 - 5.8. Видалення Samsung QLED з замовлень за 2024 рік
+2025-04-06 15:20:35,875 - 5.9. Перейменування Rodionov на Haiduchyk
+2025-04-06 15:20:35,876 - 5.10. Деталі товарів у замовленнях клієнта Andrii (join):
+2025-04-06 15:20:35,876 - Customer: {'name': 'Andrii', 'surname': 'Haiduchyk', 'phones': [9876543, 1234567], 'address': 'PTI, Peremohy 37, Kyiv, UA'}
+2025-04-06 15:20:35,877 -  - iPhone 13 ($999)
+2025-04-06 15:20:35,878 -  - Samsung QLED ($1500)
+2025-04-06 15:20:35,879 -  - Pixel 6 ($699)
+2025-04-06 15:20:35,879 - 6. Створення capped collection для відгуків
+2025-04-06 15:20:35,891 - Актуальні 5 відгуків:
+2025-04-06 15:20:35,891 - {'_id': ObjectId('67f2719358d6529103efaf61'), 'review': 'Review 2', 'rating': 3, 'user': 'user2', 'created_at': datetime.datetime(2025, 4, 6, 12, 20, 35, 889000)}
+2025-04-06 15:20:35,891 - {'_id': ObjectId('67f2719358d6529103efaf62'), 'review': 'Review 3', 'rating': 5, 'user': 'user3', 'created_at': datetime.datetime(2025, 4, 6, 12, 20, 35, 889000)}
+2025-04-06 15:20:35,891 - {'_id': ObjectId('67f2719358d6529103efaf63'), 'review': 'Review 4', 'rating': 4, 'user': 'user4', 'created_at': datetime.datetime(2025, 4, 6, 12, 20, 35, 890000)}
+2025-04-06 15:20:35,891 - {'_id': ObjectId('67f2719358d6529103efaf64'), 'review': 'Review 5', 'rating': 3, 'user': 'user5', 'created_at': datetime.datetime(2025, 4, 6, 12, 20, 35, 890000)}
+2025-04-06 15:20:35,891 - {'_id': ObjectId('67f2719358d6529103efaf65'), 'review': 'Review 6', 'rating': 5, 'user': 'user6', 'created_at': datetime.datetime(2025, 4, 6, 12, 20, 35, 890000)}
